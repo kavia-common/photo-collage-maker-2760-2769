@@ -1,0 +1,4 @@
+{
+    "command": "npm run test",
+    "working_directory": "/tmp/kavia/workspace/code-generation/photo-collage-maker-2760-2769/photo_collage_frontend"
+}
