@@ -1,6 +1,28 @@
 # Lightweight React Template for KAVIA
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+## Photo Collage Maker (Custom UI)
+
+A modern, lightweight photo collage maker allows you to:
+- Upload multiple images
+- Arrange them in a drag-and-drop grid
+- Adjust rows, columns, spacing, size, and background
+- Download the composed collage as a single PNG image
+
+### How to Use
+
+1. **Add Images**: Click "+ Add Images" and select photos from your device. They appear in the collage grid preview.
+2. **Arrange**: Drag images to reorder them. Each can be removed using the "×" button.
+3. **Adjust Grid**: Use the controls to set number of rows/columns, spacing (gap), and canvas size or background color. The preview updates instantly.
+4. **Download**: Click "Download Collage" to export the current arrangement as a single PNG image.
+
+*All processing is local; no photos are uploaded to a server. Controls are keyboard-accessible and fully responsive.*
+
+### Export notes
+
+- Collage images are composed with object-fit:cover (default) behavior.
+- The exported PNG reflects the current grid, arrangement, and settings.
+
+---
 
 ## Features
 
@@ -10,24 +32,6 @@ This project provides a minimal React template with a clean, modern UI and minim
 - **Simple**: Easy to understand and modify
 
 ## Getting Started
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
 
 ### Colors
 

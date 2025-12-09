@@ -29,6 +29,158 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* --- Collage Maker UI Additions + Theme --- */
+
+.collage-app {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.collage-header {
+  background: #ffffff;
+  border-bottom: 2px solid #3b82f622;
+  letter-spacing: -.01em;
+  font-size: 2.1rem;
+  font-weight: 800;
+}
+
+.collage-controls .ctrl-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 74px;
+  align-items: flex-start;
+  gap: 2px;
+  font-size: 15px;
+}
+.collage-controls label {
+  font-weight: 600;
+}
+.collage-controls input[type="number"] {
+  padding: 3px 7px;
+}
+
+/* Collage grid and image styles */
+.collage-grid {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  background: #f9fafb;
+  display: grid;
+  outline: none;
+  border-radius: 10px;
+}
+
+/* Drag-and-drop photo item */
+.collage-photo-item {
+  position: relative;
+  box-shadow: 0 1px 6px #d4dace44;
+  border: 2px solid transparent;
+  background: #fff;
+  border-radius: 7px;
+  min-width: 0;
+  min-height: 35px;
+  outline: none;
+  transition: box-shadow 0.17s, border-color 0.19s;
+}
+.collage-photo-item:focus-visible {
+  border-color: #3b82f6;
+  outline: 2px solid #3b82f6;
+  z-index: 10;
+}
+.collage-photo-item img {
+  display: block;
+  border-radius: 6px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Remove photo "X" button */
+.remove-btn {
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 18px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 4;
+  opacity: 0.9;
+  transition: background 0.15s;
+}
+.remove-btn:hover, .remove-btn:focus {
+  background: #b91c1c;
+}
+
+/* Upload label as a button */
+.upload-label {
+  background: #3b82f6;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.14s;
+}
+.upload-label:hover, .upload-label:focus {
+  background: #2563eb;
+}
+
+::-webkit-file-upload-button { visibility: hidden; }
+
+/* Download button style (themed) */
+.collage-app button[aria-disabled="true"],
+.collage-app button:disabled {
+  opacity: 0.65 !important;
+  cursor: not-allowed !important;
+}
+
+/* Footer */
+footer {
+  background: #fff;
+  color: #64748b;
+  border-top: 1px solid #e5e7eb;
+  font-size: 15px;
+  padding-top: .5rem;
+  margin-top: 2.2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .collage-app main { max-width: 98vw; }
+}
+@media (max-width: 700px) {
+  .collage-header {
+    font-size: 1.36rem;
+    padding: 1.4rem 0 0.5rem 0;
+  }
+  .collage-controls {
+    font-size: 13px;
+    padding: 9px;
+  }
+}
+@media (max-width: 535px) {
+  .collage-app main { padding: 1.1rem 4px 2rem 4px; }
+  .collage-header { font-size: 1.05rem; }
+}
+
+/* Remove react default logo spin */
+.App-logo {
+  display: none;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
